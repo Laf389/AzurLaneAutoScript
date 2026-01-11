@@ -530,7 +530,7 @@ class OperationSiren(OSMap):
         if not getattr(self.config, 'OpsiScheduling_EnableSmartScheduling', False):
             return
             
-        self._last_notified_ap_threshold = getattr(self.config, 'OpsiScheduling_LastNotifiedAPThreshold', None)
+        self._last_notified_ap_threshold = self.config.OpsiScheduling_LastNotifiedAPThreshold
         
         # 获取当前行动力总量
         current_ap = self._action_point_total
