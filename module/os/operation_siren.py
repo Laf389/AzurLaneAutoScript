@@ -553,6 +553,7 @@ class OperationSiren(OSMap):
         
         # 如果跨越了阈值区间，发送推送通知
         if current_threshold != self._last_notified_ap_threshold:
+            logger.info(f"{self._last_notified_ap_threshold}")
             if current_threshold is not None:
                 # 判断是升至还是降至该阈值
                 if self._last_notified_ap_threshold is None:
